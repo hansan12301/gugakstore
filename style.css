@@ -1,0 +1,9 @@
+body    {
+    word-break: keep-all;
+    text-wrap: balance;
+
+    margin: 0px;
+    padding: 0px;
+
+    overflow-x: hidden;
+}
