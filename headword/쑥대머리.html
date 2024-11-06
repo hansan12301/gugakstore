@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두의 국악상점</title>
+    <meta name="robots" content="index,nofollow">
+    <meta property="og:url" content="http://website.com">
+    <meta property="og:title" content="모두의 국악상점">
+    <meta property="og:image" content="미리보기 섬네일 이미지 주소">
+    <meta property="og:description" content="웹사이트를 소개글">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'xoh7uvb',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+<body>
+    <header>
+        <button onclick="goBack()">
+            <img src="../img/Back_btn.svg" alt="뒤로 가기">
+        </button>
+        <button id="menuBtn">
+            <img src="../img/Menu_btn.svg" alt="메뉴바">
+        </button>
+        <button id="exitBtn" class="inactive">
+            <img src="../img/exit_btn.svg" alt="">
+        </button>
+    </header>
+    <main>
+        <nav id="menu">
+            <ol>
+                <li><a href="../index.html"><h5>국악상점 소개</h5></a></li>
+                <li><a href="../section1.html"><h5>전시구역</h5></a></li>
+                <li><a href="../headword.html"><h5>표제어 상점</h5></a></li>
+            </ol>
+        </nav>
+        <section>
+            <div class="lettering">
+                <svg id="lettering" viewBox="0 0 200 200" width="200" height="200">
+                    <circle cx="100" cy="100" fill="#FFFFBD" />
+                </svg>
+            </div>
+            <div class="headwordMeaning">
+                <h2 id="title" class="black"></h2>
+                <p id="manuscript">
+                </p>
+            </div>
+            <div class="headwordMeaning">
+                <div class="author">
+                    <h2 class="black">작가노트</h2>
+                    <h6 id="author"></h6>
+                </div>
+                <p id="workNote">
+                </p>
+            </div>
+            <div class="linkBox">
+                <div id="btnSave" class="box blackBox detail">
+                    <h6 class="white">
+                        표제어 레터링 다운로드
+                    </h6>
+                </div>
+                <div class="box blackBox detail">
+                    <a id="link" href="#" target="_blank" rel="noreferrer noopener">
+                        <h6 class="white">
+                            국악사전에서 보기
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="https://www.gugak.go.kr/site/main/index001" target="_blank">
+                <img src="../img/gugakLogo.svg" alt="국립국악원">
+            </a>
+            <a href="https://www.gugak.go.kr/ency/" target="_blank">
+                <img src="../img/gugakDictionaryLogo.svg" alt="국악사전">
+            </a>
+        </nav>
+        <hr>
+        <nav>
+            <a href="https://typographyseoul.com/home/" target="_blank">
+                <img src="../img/ttSeoulLogo.svg" alt="tt.서울">
+            </a>
+            <a href="https://ddungsang.com/" target="_blank">
+                <img src="../img/ddungsangLogo.svg" alt="엉뚱상상">
+            </a>
+            <a href="https://typographyseoul.com/home/" target="_blank">
+                <img src="../img/typographySeoulLogo.svg" alt="Typography Seoul">
+            </a>
+        </nav>
+        <div class="copyright">
+            <p>Copyright©국립국악원. all right reserved</p>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="./headword.js"></script>
+</body>
+</html>

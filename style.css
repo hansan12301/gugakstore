@@ -39,7 +39,7 @@ h1  {
     padding-bottom: 1.8rem;
 }
 h2  {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-weight: 900; 
     margin: 0px;
     color: rgb(231, 55, 47);
@@ -55,14 +55,15 @@ h3  {
     line-height: 130%;
 }
 h4  {
-    font-size: 1.2rem;
-    font-weight: 700; 
+    font-size: 1.6rem;
+    font-weight: 900; 
     margin: 0px;
     color: rgb(255, 47, 52);
     text-align: center;
+    line-height: 130%;
 }
 h5  {
-    font-size: 3.2rem;
+    font-size: 3.0rem;
     font-weight: 900; 
     margin: 0px;
     color: rgb(50, 50, 50);
@@ -83,7 +84,7 @@ p   {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-family: Pretendard;
     font-style: normal;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 140%;
     color: rgb(50, 50, 50);
@@ -93,7 +94,7 @@ p   {
 
 header  {
     box-sizing: border-box;
-    height: 9rem;
+    height: 5.4rem;
     width: 100vw;
 
     display: flex;
@@ -106,13 +107,13 @@ header  {
     right: 0;
     z-index: 2;
 
-    padding: 2.0rem;
+    padding: 1.0rem;
 
     background-color: rgb(237, 230, 221);
 }
 
 main    {
-    padding-top: 9rem;
+    padding-top: 5.4rem;
     display: flex;
     flex-direction: column;
     gap: 1.0rem;
@@ -152,7 +153,20 @@ hr  {
     border-width: 0.05rem;
 }
 
-li  {
+ol p {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    display: none;
+}
+
+ol p.active {
+    display: block;
+    opacity: 1;
+}
+
+ol li  {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -168,6 +182,38 @@ li h3 {
     line-height: 150%;
 }
 
+ul  {
+    width: calc(100vw - 4rem);
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.0rem;
+}
+
+ul li   {
+    width: calc(50vw - 2.5rem);
+    height: calc(50vw - 2.5rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    list-style-type: none;
+    background-color: gray;
+}
+
+li h2   {
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+
+ul li:hover h2{
+    opacity: 100;
+}
+
 button  {
     all: unset;
     width: 3.4rem;
@@ -179,11 +225,14 @@ button img {
 }
 
 button img.rotated {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 a   {
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 table   {
@@ -212,7 +261,7 @@ td h6    {
     position: fixed;
     background-color: rgb(237, 230, 221);
     width: 100vw;
-    height: calc(100vh - 9rem);
+    height: calc(100vh - 5.4rem);
     margin-left: 100vw;
     transition: margin-left 0.5s ease;
     z-index: 2;
@@ -239,7 +288,10 @@ td h6    {
 .green  {
     color: rgb(3, 165, 75);
 }
-
+.black  {
+    color: rgb(50, 50, 50);
+    text-align: left;
+}
 .white   {
     color: white;
 }
@@ -354,19 +406,6 @@ td h6    {
     align-items: center;
 }
 
-ul p {
-    overflow: hidden;
-    height: 0;
-    opacity: 0;
-    transition: height 0.3s ease, opacity 0.3s ease;
-    display: none;
-}
-
-ul p.active {
-    display: block;
-    opacity: 1;
-}
-
 .exhibitionSection {
     padding-top: 0;
 }
@@ -380,12 +419,50 @@ ul p.active {
     border-right: 0px;
 }
 
+.lettering  {
+    width: 100vw;
+    height: 100vw;
+    background-color: gray;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1.0rem;
+}
+
+.headwordMeaning    {
+    display: flex;
+    gap: 1.0rem;
+}
+
+.author h6  {
+    color: rgb(3, 165, 75);
+    text-align: left;
+}
+
 .box   {
     border: 1px solid #000;
 }
 
 .detail {
     align-items: center;
+}
+
+.linkBox    {
+    width: calc(100vw - 4rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.linkBox div    {
+    width: calc(50vw - 2.5rem);
+    padding: 1.5rem 0;
 }
 
 .copyright  {

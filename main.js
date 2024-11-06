@@ -77,3 +77,32 @@ document.querySelectorAll("#timeTable th").forEach(th => {
         }
     });
 });
+
+document.querySelector('#btnSave').addEventListener('click', () => {
+    console.log(document.querySelector("#headword"));
+    
+    const fileName = `lettering.svg`;
+    // SVG 요소 가져오기
+    const content = document.querySelector('#lettering').outerHTML;
+    // 데이터 준비
+    const dataUrl = 'data:image/svg+xml,\n' + encodeURIComponent(content);
+    // BOM의 문자 깨짐 방지
+    const bom = new Unit8Array([0xef, 0xbb, 0xbf]);
+    const blob = new Blob([bom, content], {type: 'text/plain' });
+    
+    if (window.navigator.msSaveBlob) {
+        // IE용
+        window.navigator.msSaveBlob(blob, fileName);
+    } else if (window.URL && window.URL.createObjectURL) {
+        // 파이어 폭스, 크롬, 사파리용
+        const a = document.createElement('a');
+        a.download = fileName;
+        a.href = window.URL.createObjectURL(blob);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    } else {
+        // 기타
+        window.open(dataUrl, '_blank');
+    }
+});
